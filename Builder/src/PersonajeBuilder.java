@@ -12,7 +12,7 @@ public interface PersonajeBuilder {
 
     void buildNivel(int nivel);
 
-    void buildArmaprincipal(String armaPrincipal);
+    void buildArmaPrincipal(String armaPrincipal);
     
     void buildArmadura(String armadura);
 

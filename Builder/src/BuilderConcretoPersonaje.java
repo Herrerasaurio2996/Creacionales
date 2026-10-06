@@ -1,97 +1,42 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class BuilderConcretoPersonaje implements PersonajeBuilder {
 
     private Personaje resultado;
-    private List<String> rasgos = new ArrayList<>();
-    private List<String> habilidadesActivas = new ArrayList<>();
-    private List<String> habilidadesPasivas = new ArrayList<>();
+
+public BuilderConcretoPersonaje() {reset();}
 
 @Override 
-public void reset() {
-
-    this.resultado = new Personaje();
-    this.rasgos = new ArrayList<>();
-    this.habilidadesActivas = new ArrayList<>();
-    this.habilidadesPasivas = new ArrayList<>();
-
-
-}
+public void reset() {this.resultado = new Personaje();}
 
 @Override
-public void buildNombre(String nombre) {
-    resultado.setNombre(nombre);
-}
+public void buildNombre(String nombre) {resultado.setNombre(nombre);}
 
 @Override 
-public void buildClase(String clase) {
-    resultado.setClase(clase);
-}
+public void buildClase(String clase) {resultado.setClase(clase);}
 
 @Override 
-public void buildRaza(String raza) {
-    resultado.setRaza(raza);
-}
+public void buildRaza(String raza) {resultado.setRaza(raza);}
 
 @Override 
-public void buildRasgos(String rasgo) {
-
-    this.rasgos.add(rasgo);
-
-    resultado.setRasgos(rasgos);
-}
+public void buildRasgos(String rasgo) {resultado.agregarRasgos(rasgo);}
 
 @Override 
-public void buildNivel(int nivel) {
-
-    resultado.setNivel(nivel);
-
-}
+public void buildNivel(int nivel) {resultado.setNivel(nivel);}
 
 @Override
-public void buildArmaprincipal(String arma) {
-
-    resultado.setArmaPrincipal(arma);
-
-}
+public void buildArmaPrincipal(String arma) {resultado.setArmaPrincipal(arma);}
 
 @Override
-public void buildArmadura(String armadura) {
-
-    resultado.setArmadura(armadura);
-
-}
+public void buildArmadura(String armadura) {resultado.setArmadura(armadura);}
 
 @Override
-public void buildHabilidadesActivas(String activa) {
-
-    this.habilidadesActivas.add(activa);
-
-    resultado.setHabilidadesActivas(habilidadesActivas);
-
-}
+public void buildHabilidadesActivas(String activa) {resultado.agregarHabilidadesActivas(activa);}
 
 @Override
-public void buildHabilidadesPasivas(String pasiva) {
-
-    this.habilidadesPasivas.add(pasiva);
-
-    resultado.setHabilidadesPasivas(habilidadesPasivas);
-
-}
+public void buildHabilidadesPasivas(String pasiva) {resultado.agregarHabilidadesPasivas(pasiva);}
 
 @Override
-public void buildMascota(String mascota) {
+public void buildMascota(String mascota) {resultado.setMascota(mascota);}
 
-    resultado.setMascota(mascota);
-
-}
-
-public Personaje obtenerPersonaje() {
-
-    return resultado;
-
-}
+public Personaje obtenerPersonaje() {return resultado;}
 
 }

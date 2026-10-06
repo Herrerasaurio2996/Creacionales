@@ -19,13 +19,13 @@ public class Personaje {
     public void setNombre(String nombre) {this.nombre = nombre;}
     public void setClase(String clase) {this.clase = clase;}
     public void setRaza(String raza) {this.raza = raza;}
-    public void setRasgos(List<String> rasgos) {this.rasgos = rasgos;}
     public void setNivel(int nivel) {this.nivel = nivel;}
     public void setArmaPrincipal(String armaPrincipal) {this.armaPrincipal = armaPrincipal;}
     public void setArmadura(String armadura) {this.armadura = armadura;}
-    public void setHabilidadesActivas(List<String> activas) {this.habilidadesActivas = activas;}
-    public void setHabilidadesPasivas(List<String> pasivas) {this.habilidadesPasivas = pasivas;}
     public void setMascota(String mascota) {this.mascota = mascota;}
+    public void agregarRasgos(String rasgo) {rasgos.add(rasgo);}
+    public void agregarHabilidadesActivas(String activa) {habilidadesActivas.add(activa);}
+    public void agregarHabilidadesPasivas(String pasiva) {habilidadesPasivas.add(pasiva);}
     
     //? Getters (No son obligatorios pero me da TOC)
     public String getNombre() {return this.nombre;}
@@ -42,16 +42,16 @@ public class Personaje {
     @Override
     public String toString() {
         return "{" +
-            " nombre='" + getNombre() + "'" +
-            ", clase='" + getClase() + "'" +
-            ", raza='" + getRaza() + "'" +
-            ", rasgos='" + getRasgos() + "'" +
-            ", nivel='" + getNivel() + "'" +
-            ", armaPrincipal='" + getArmaPrincipal() + "'" +
-            ", armadura='" + getArmadura() + "'" +
-            ", habilidadesActivas='" + getHabilidadesActivas() + "'" +
-            ", habilidadesPasivas='" + getHabilidadesPasivas() + "'" +
-            ", mascota='" + getMascota() + "'" +
+            " nombre ='" + getNombre() + "'" +
+            ", clase ='" + getClase() + "'" +
+            ", raza ='" + getRaza() + "'" +
+            ", rasgos ='" + getRasgos() + "'" +
+            ", nivel ='" + getNivel() + "'" +
+            ", armaPrincipal ='" + getArmaPrincipal() + "'" +
+            ", armadura ='" + getArmadura() + "'" +
+            ", habilidadesActivas ='" + getHabilidadesActivas() + "'" +
+            ", habilidadesPasivas ='" + getHabilidadesPasivas() + "'" +
+            ", mascota ='" + getMascota() + "'" +
             "}";
     }
 }

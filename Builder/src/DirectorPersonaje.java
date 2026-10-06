@@ -1,8 +1,8 @@
-public class BuilderDirector {
+public class DirectorPersonaje {
 
     private PersonajeBuilder builder;
 
-    BuilderDirector(PersonajeBuilder builder) {
+    public DirectorPersonaje(PersonajeBuilder builder) {
 
         this.builder = builder;
     
@@ -15,17 +15,17 @@ public class BuilderDirector {
     }
 
     //Personaje Guerrero
-    public void buildPersonajeGuerrero() {
+    public void buildPersonajeGuerrero(String nombre, int nivel) {
 
         builder.reset();
-        builder.buildNombre("Kael");
+        builder.buildNombre(nombre);
         builder.buildClase("Guerrero");
         builder.buildRaza("Humano");
         builder.buildRasgos("Valiente");
         builder.buildRasgos("Resistente");
         builder.buildRasgos("Lider");
-        builder.buildNivel(15);
-        builder.buildArmaprincipal("Espada de acero");
+        builder.buildNivel(nivel);
+        builder.buildArmaPrincipal("Espada de acero");
         builder.buildArmadura("Armadura pesada");
         builder.buildHabilidadesActivas("Golpe devastador");
         builder.buildHabilidadesActivas("Carga brutal");
@@ -37,17 +37,17 @@ public class BuilderDirector {
     }
 
     //Personaje Mago
-    public void buildPersonajeMago() {
+    public void buildPersonajeMago(String nombre, int nivel) {
 
         builder.reset();
-        builder.buildNombre("Lyra");
+        builder.buildNombre(nombre);
         builder.buildClase("Maga");
         builder.buildRaza("Elfa");
         builder.buildRasgos("Inteligente");
         builder.buildRasgos("Serena");
         builder.buildRasgos("Misteriosa");
-        builder.buildNivel(12);
-        builder.buildArmaprincipal("Baculo de cristal");
+        builder.buildNivel(nivel);
+        builder.buildArmaPrincipal("Baculo de cristal");
         builder.buildArmadura("Tunica arcana");
         builder.buildHabilidadesActivas("Bola de fuego");
         builder.buildHabilidadesActivas("Rayo de hielo");
@@ -59,17 +59,17 @@ public class BuilderDirector {
     }
 
     //Personaje Picaro
-    public void buildPersonajePicaro() {
+    public void buildPersonajePicaro(String nombre, int nivel) {
 
         builder.reset();
-        builder.buildNombre("Nyx");
+        builder.buildNombre(nombre);
         builder.buildClase("Picaro");
         builder.buildRaza("Medio elfo");
         builder.buildRasgos("Agil");
         builder.buildRasgos("Astuto");
         builder.buildRasgos("Sigiloso");
-        builder.buildNivel(18);
-        builder.buildArmaprincipal("Dagas gemelas");
+        builder.buildNivel(nivel);
+        builder.buildArmaPrincipal("Dagas gemelas");
         builder.buildArmadura("Armadura de cuero oscuro");
         builder.buildHabilidadesActivas("Ataque furtivo");
         builder.buildHabilidadesActivas("Paso Sombrio");
